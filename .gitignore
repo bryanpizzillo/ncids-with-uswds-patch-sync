@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Our copy of uswds packages
+uswds-packages/
