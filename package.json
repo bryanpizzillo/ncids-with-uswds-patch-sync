@@ -1,16 +1,12 @@
 {
   "name": "@bryanpizzillo/ncids-with-uswds-patch-sync",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Testing patching and syncing uswds",
   "main": "index.js",
   "repository": "http://github.com/bryanpizzillo/ncids-with-uswds-patch-sync",
   "author": "Bryan Pizzillo <bryanpizzillo@users.noreply.github.com>",
   "license": "MIT",
-  "scripts": {
-    "postinstall": "patch-package && ./scripts/sync-uswds-packages.js",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
-  },
+  "scripts": {},
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
