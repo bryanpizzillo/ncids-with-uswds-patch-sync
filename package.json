@@ -6,6 +6,12 @@
   "repository": "http://github.com/bryanpizzillo/ncids-with-uswds-patch-sync",
   "author": "Bryan Pizzillo <bryanpizzillo@users.noreply.github.com>",
   "license": "MIT",
+	"scripts": {
+		"patch-uswds": "patch-package @uswds/uswds && ./scripts/sync-uswds-packages.js",
+    "postinstall": "patch-package && ./scripts/sync-uswds-packages.js",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
