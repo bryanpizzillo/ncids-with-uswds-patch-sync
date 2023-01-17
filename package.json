@@ -7,7 +7,12 @@
   "author": "Bryan Pizzillo <bryanpizzillo@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "patch-package && ./scripts/sync-uswds-packages.js"
+    "postinstall": "patch-package && ./scripts/sync-uswds-packages.js",
+		"prepack": "pinst --disable",
+		"postpack": "pinst --enable"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@uswds/uswds": "^3.3.0",
@@ -15,6 +20,7 @@
     "mkdirp": "^1.0.4",
     "ncp": "^2.0.0",
     "patch-package": "^6.5.1",
+    "pinst": "^3.0.0",
     "postinstall-postinstall": "^2.1.0",
     "rimraf": "^4.0.7"
   },
