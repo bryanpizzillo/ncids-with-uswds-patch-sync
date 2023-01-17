@@ -1,23 +1,39 @@
 diff --git a/node_modules/@uswds/uswds/.DS_Store b/node_modules/@uswds/uswds/.DS_Store
 new file mode 100644
-index 0000000..363e90a
-Binary files /dev/null and b/node_modules/@uswds/uswds/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@uswds/uswds/packages/.DS_Store b/node_modules/@uswds/uswds/packages/.DS_Store
 new file mode 100644
-index 0000000..03b1b0e
-Binary files /dev/null and b/node_modules/@uswds/uswds/packages/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@uswds/uswds/packages/uswds-core/.DS_Store b/node_modules/@uswds/uswds/packages/uswds-core/.DS_Store
 new file mode 100644
-index 0000000..a91aec3
-Binary files /dev/null and b/node_modules/@uswds/uswds/packages/uswds-core/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@uswds/uswds/packages/uswds-core/src/.DS_Store b/node_modules/@uswds/uswds/packages/uswds-core/src/.DS_Store
 new file mode 100644
-index 0000000..3d093a2
-Binary files /dev/null and b/node_modules/@uswds/uswds/packages/uswds-core/src/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@uswds/uswds/packages/uswds-core/src/styles/.DS_Store b/node_modules/@uswds/uswds/packages/uswds-core/src/styles/.DS_Store
 new file mode 100644
-index 0000000..dcab0d6
-Binary files /dev/null and b/node_modules/@uswds/uswds/packages/uswds-core/src/styles/.DS_Store differ
+index 0000000..e69de29
+diff --git a/node_modules/@uswds/uswds/packages/uswds-core/src/styles/_properties.scss b/node_modules/@uswds/uswds/packages/uswds-core/src/styles/_properties.scss
+index eb5b941..eab0c93 100644
+--- a/node_modules/@uswds/uswds/packages/uswds-core/src/styles/_properties.scss
++++ b/node_modules/@uswds/uswds/packages/uswds-core/src/styles/_properties.scss
+@@ -145,11 +145,11 @@ $system-properties: (
+   box-shadow: (
+     standard: (
+       "none": none,
+-      1: 0 units(1px) units(0.5) 0 rgba(0, 0, 0, 0.1),
+-      2: 0 units(0.5) units(1) 0 rgba(0, 0, 0, 0.1),
+-      3: 0 units(1) units(2) 0 rgba(0, 0, 0, 0.1),
+-      4: 0 units(1.5) units(3) 0 rgba(0, 0, 0, 0.1),
+-      5: 0 units(2) units(4) 0 rgba(0, 0, 0, 0.1),
++      1: 0 units(1px) units(0.5) 0 rgba(0, 0, 0, 0.3),
++      2: 0 units(0.5) units(1) 0 rgba(0, 0, 0, 0.3),
++      3: 0 units(1) units(2) 0 rgba(0, 0, 0, 0.3),
++      4: 0 units(1.5) units(3) 0 rgba(0, 0, 0, 0.3),
++      5: 0 units(2) units(4) 0 rgba(0, 0, 0, 0.3),
+     ),
+     extended: (),
+   ),
 diff --git a/node_modules/@uswds/uswds/packages/uswds-core/src/styles/settings/_settings-color.scss b/node_modules/@uswds/uswds/packages/uswds-core/src/styles/settings/_settings-color.scss
 index cda8dbc..d0db4b2 100644
 --- a/node_modules/@uswds/uswds/packages/uswds-core/src/styles/settings/_settings-color.scss
@@ -312,8 +328,7 @@ index a95bacc..aa3863c 100644
  /*
 diff --git a/node_modules/@uswds/uswds/packages/uswds-core/src/styles/tokens/.DS_Store b/node_modules/@uswds/uswds/packages/uswds-core/src/styles/tokens/.DS_Store
 new file mode 100644
-index 0000000..22c7675
-Binary files /dev/null and b/node_modules/@uswds/uswds/packages/uswds-core/src/styles/tokens/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@uswds/uswds/packages/uswds-core/src/styles/tokens/color/_cerulean.scss b/node_modules/@uswds/uswds/packages/uswds-core/src/styles/tokens/color/_cerulean.scss
 new file mode 100644
 index 0000000..7865cd9

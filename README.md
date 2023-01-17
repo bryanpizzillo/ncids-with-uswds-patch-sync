@@ -2,16 +2,27 @@
 Test of patching and syncing USWDS for NCIDS
 
 ## Notes about this setup
-1. USWDS should be installed as a dev dependency since we don't want dependent projects to download it. 
+1. USWDS should be installed as a dev dependency since we don't want dependent projects to download it.
 1. this uses yarn to be more like NCIDS-css
    1. The patching process is different for yarn than npm, so this will mimick our setup best.
-1. 
+1. On install, we:
+   1. patch USWDS to modify files we cannot republish or work with.
+	 2. copy the USWDS packages using the `./scripts/uswds-sync` script, following the rules in the uswdsSync configuration of the `package.json` file. The config is as follows:
+	    * Any packages listed in the `excludePackages` setting will be excluded.
+			* Any packages listed in the `internalPackages` setting will be copied to a private `internal-uswds` directory.
+			  * When packages are internal there is an expectation that a same named partial will be created in `packages`
+			  * If other packages reference specific files, you need to "republish" those files as well. 'e.g. `uswds-core/src/styles/functions/color/get-system-color`
+			* Any package not listed in either of those places, that has scss files, will be copied to `uswds-packages`.
+    3. TODO: Copy over file assets.
 
 ## Notes about USWDS
 * `packages/uswds-tokens/color/*` - this appears to be json related to documentation or something. Maybe not needed? Only referenced in `format-tokens` npm script.
   * This could probably be removed -- will ignore for now updating colors.
+* The flag size was changed and the banner has issues.
 
 ### Changes
+* Updated box-shadow
+
 <table>
   <tr><td colspan="3">System Token Changes</td></tr>
   <tr><td colspan="3">Colors</td></tr>
@@ -88,7 +99,7 @@ Test of patching and syncing USWDS for NCIDS
         1. Added `poppins` to the `$system-typeface-tokens`
         2. Removed the src element for roboto-mono.
            * This is so we can use Google Fonts
-        
+
         NOTE: we also removed some other stuff.
     </td>
     <td>
@@ -143,7 +154,7 @@ Test of patching and syncing USWDS for NCIDS
       Changed `_settings-color.scss`
       * Changed `$theme-color-primary-*` colors from blue to cerulean.
       * Changed `$theme-color-secondary-*` colors from red to teal.
-      * Changed `$theme-color-accent-warm-*` from orange to golden. 
+      * Changed `$theme-color-accent-warm-*` from orange to golden.
       * Changed `$theme-color-accent-cool-*` from blue cool to navy
       * Changed `$theme-color-error-*` colors from red-warm to cranberry
       * Changed `$theme-color-warning-*` colors from gold to golden
@@ -175,7 +186,7 @@ Test of patching and syncing USWDS for NCIDS
         * Set `$theme-breadcrumb-font-size` to 2xs
         * Set `$theme-footer-max-width` to widescreen
         * Set `$theme-header-max-width` to widescreen
-        * Set `$theme-identifier-max-width` to widescreen 
+        * Set `$theme-identifier-max-width` to widescreen
         * Set `$theme-navigation-font-family` to heading
         * Set `$theme-site-alert-max-width` to widescreen
     </td>
