@@ -9,6 +9,11 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "scripts": {
+    "postinstall": "patch-package && ./scripts/sync-uswds-packages.js",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
   "files": [
     "packages",
     "uswds-packages",
